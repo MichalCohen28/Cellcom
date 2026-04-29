@@ -11,10 +11,11 @@
     <!-- Pop-up video - hidden at start -->
     <div id="welcomePop" class="welcome-overlay hidden">
         <div class="video-pop-container">
-            <video id="characterVideo" playsinline>
-                <source src="Purple_star_mascot_202604281142_1.webm" type="video/webm">
-            </video>
-        </div>
+    <button onclick="closeVideoPopup()" class="close-video-btn">✕</button>
+    <video id="characterVideo" playsinline>
+        <source src="Purple_star_mascot_202604281142_1.mp4" type="video/mp4">
+    </video>
+</div>
     </div>
 
     <header>
@@ -55,7 +56,7 @@
             <div class="star-click-wrapper" onclick="openStarVideo()">
                 <div class="click-me-label">לחץ עליי ✨</div>
                 <div class="star-image-area">
-                    <img src="image copy.png" alt="כוכב סלקום">
+                    <img src="Star No BG.png" alt="כוכב סלקום">
                 </div>
             </div>
 
@@ -63,20 +64,48 @@
                 <h1>שלום ישראל,</h1>
                 <p>ברוך הבא לחנות ההטבות,</p>
                 <div class="points">מאזן הכוכבים שלך הוא: 1000 כוכבים</div>
-                <div class="start">בוא נתחיל!</div>
             </div>
 
         </div>
     </section>
 
-    <nav class="categories-nav">
-        <div class="cat-item"><div class="cat-circle">📺</div><span>סטרימינג</span></div>
-        <div class="cat-item"><div class="cat-circle">🔵</div><span>גלישה</span></div>
-        <div class="cat-item"><div class="cat-circle">📱</div><span>מכשירים</span></div>
-        <div class="cat-item"><div class="cat-circle">⚡</div><span>Energy</span></div>
-        <div class="cat-item"><div class="cat-circle">🛡️</div><span>אבטחה</span></div>
-    </nav>
+    <!-- Categories Nav -->
+   <nav class="categories-nav">
+    <div class="cat-item active-cat">
+        <div class="cat-circle">
+            <img src="Images/icons/Video.png" alt="סטרימינג">
+        </div>
+        <span>סטרימינג</span>
+    </div>
 
+    <div class="cat-item">
+        <div class="cat-circle">
+            <img src="Images/icons/Internet.png" alt="גלישה">
+        </div>
+        <span>גלישה</span>
+    </div>
+
+    <div class="cat-item">
+        <div class="cat-circle">
+            <img src="Images/icons/Phone.png" alt="מכשירים">
+        </div>
+        <span>מכשירים</span>
+    </div>
+
+    <div class="cat-item">
+        <div class="cat-circle">
+            <img src="Images/icons/Energy.png" alt="Energy">
+        </div>
+        <span>Energy</span>
+    </div>
+
+    <div class="cat-item">
+        <div class="cat-circle">
+            <img src="Images/icons/Sec.png" alt="אבטחה">
+        </div>
+        <span>אבטחה</span>
+    </div>
+</nav>
     <main class="store-layout">
         <aside class="sidebar">
             <div class="breadcrumb">דף הבית / מנות מוצעות</div>
@@ -84,98 +113,93 @@
 
             <div class="filter-section">
                 <p style="font-size: 14px; color: #666;">בחרת לסנן לפי:</p>
-                <div class="filter-tag">טלפונים סלולריים <span>✕</span></div>
-                <div class="filter-tag">ציוד תקשורת ביתי <span>✕</span></div>
+                <div class="filter-tag">סטרימינג<span>✕</span></div>
+                <div class="filter-tag">מכשירים<span>✕</span></div>
             </div>
         </aside>
 
         <div class="benefits-grid">
+
+            <!-- Card 1: Internet / Browsing -->
             <div class="card">
-                <div class="card-header bg-black">
-                    <span class="badge-new">חדש! NETFLIX</span>
+                <div class="card-header bg-purple-grad">
+                    <img src="5G.png" alt="אינטרנט" class="card-header-img" width="100%">
                 </div>
                 <div class="card-body">
-                    <h3>נטפליקס חינם לחודש</h3>
-                    <p>חודש ראשון עלינו - חוויה ממכרת</p>
+
+                    <h3>הגדלת חבילת גלישה</h3>
+                    <p>שדרג את המהירות לעד 5G</p>
                 </div>
-                <div class="card-footer">★ ב-50 כוכבים בלבד!</div>
+                <div class="card-footer">
+                    <span class="star-icon">★</span> ב-50 כוכבים בלבד
+                </div>
             </div>
 
+            <!-- Card 2: Sports -->
             <div class="card">
-                <div class="card-header bg-blue">
-                    <span class="badge-new">חדש! SPORTS</span>
+                <div class="card-header bg-sports">
+                    <img src="Sport.png" alt="ספורט" class="card-header-img" width="100%">
                 </div>
                 <div class="card-body">
+
                     <h3>חבילת ערוצי ספורט</h3>
                     <p>כל משחקי הליגה והליגות האירופיות</p>
                 </div>
-                <div class="card-footer">★ ב-200 כוכבים</div>
+                <div class="card-footer">
+                    <span class="star-icon">★</span> ב-200 כוכבים
+                </div>
             </div>
 
+            <!-- Card 3: Netflix -->
             <div class="card">
-                <div class="card-header bg-grad-blue">
-                    📶
+                <div class="card-header bg-netflix">
+                    <img src="Netflix.png" alt="נטפליקס" class="card-header-img"  width="200" height="130">
                 </div>
                 <div class="card-body">
-                    <h3>הגדלת חבילת גלישה</h3>
-                    <p>שדרג את המהירות לעד double.5</p>
+
+                    <h3>נטפליקס חינם לחודש</h3>
+                    <p>חודש ראשון עלינו - חוויה ממכרת</p>
                 </div>
-                <div class="card-footer">★ ב-50 כוכבים בלבד</div>
+                <div class="card-footer">
+                    <span class="star-icon">★</span> ב-50 כוכבים !
+                </div>
             </div>
+
         </div>
     </main>
 
     <div class="floating-bubble">
-        <img src="image copy.png" alt="כוכב צ׳אט" class="chat-star">
+        <img src="Star No BG.png" alt="כוכב צ׳אט" class="chat-star">
         <div class="chat-content">
-            <div class="chat-title">כוכבי כאן!</div>
+            <div class="chat-title">היי כאן כוכבי!</div>
             <div class="chat-message">רוצה שאעזור לך לבחור הטבה?</div>
         </div>
     </div>
 
-    <script>
-        function openStarVideo() {
-            const popup = document.getElementById('welcomePop');
-            const video = document.getElementById('characterVideo');
+   <script>
+    const popup = document.getElementById('welcomePop');
+    const video = document.getElementById('characterVideo');
 
-            if (!popup || !video) return;
+    function openStarVideo() {
+        popup.classList.remove('hidden');
+        video.pause();
+        video.currentTime = 0;
 
-            popup.classList.remove('hidden');
-
-            video.pause();
-            video.currentTime = 0;
+        setTimeout(() => {
             video.muted = false;
             video.volume = 1;
-
             video.play();
-        }
+        }, 600); // 1 שניה המתנה לפני שמתחיל
+    }
 
-        function closeVideoPopup() {
-            const popup = document.getElementById('welcomePop');
-            const video = document.getElementById('characterVideo');
+    function closeVideoPopup() {
+        video.pause();
+        video.currentTime = 0;
+        video.muted = true;
+        popup.classList.add('hidden');
+    }
 
-            if (!popup || !video) return;
-
-            video.pause();
-            video.currentTime = 0;
-            video.muted = true;
-            video.volume = 0;
-
-            popup.classList.add('hidden');
-        }
-
-        window.addEventListener('load', function () {
-            const video = document.getElementById('characterVideo');
-
-            if (!video) return;
-
-           video.addEventListener('timeupdate', function () {
-            if (video.duration && video.currentTime >= video.duration - 0.5) {
-                closeVideoPopup();
-            }
-        });
-        });
-    </script>
-
+    video.addEventListener('ended', closeVideoPopup);
+</script>
 </body>
 </html>
