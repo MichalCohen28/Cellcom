@@ -57,7 +57,7 @@
                 <div class="click-me-label">לחץ עליי ✨</div>
                <div class="star-image-area">
                 <video autoplay muted loop playsinline class="star-video">
-                    <source src="Waving Star.webm" type="video/webm">
+                    <source src="Waving Star2.webm" type="video/webm">
                 </video>
             </div>
             </div>
@@ -114,7 +114,7 @@
 </nav>
     <main class="store-layout">
         <aside class="sidebar">
-            <div class="breadcrumb">דף הבית / מנות מוצעות</div>
+            <div class="breadcrumb">דף הבית / הטבות מוצעות</div>
             <h2>הטבות מוצעות</h2>
 
             <div class="filter-section">
@@ -127,8 +127,7 @@
         <div class="benefits-grid">
 
             <!-- Card 1: Internet / Browsing -->
-            <div class="card">
-                <div class="card-header bg-purple-grad">
+            <div class="card" onclick="openBrowsingPopup()" style="cursor: pointer;">                <div class="card-header bg-purple-grad">
                     <img src="5G.png" alt="אינטרנט" class="card-header-img" width="100%">
                 </div>
                 <div class="card-body">
@@ -182,8 +181,84 @@
         </div>
     </div>
 
+<!-- פופ-אפ חבילת גלישה -->
+<div id="browsingPop" class="modal-overlay hidden">
+    <div class="modal-container">
+        <!-- כפתור סגירה -->
+        <button onclick="closeBrowsingPopup()" class="close-modal-btn">✕</button>
+        
+        <!-- כותרת ואייקון -->
+        <div class="modal-header-section">
+            <img src="Images/icons/PopUP.png" alt="גלישה" class="modal-top-icon">
+            <h2>חבילת גלישה לבית</h2>
+            <p class="modal-desc">
+               "חבילת גלישה ביתית Cellcom Surf  *לחודש - חבילה אמינה, מהירה במיוחד , 
+               אידיאלית לצפייה בסטרימינג, עבודה מהבית ומשחקים מקוונים. אינטרנט חלק לכל המשפחה." 
+            </p>
+        </div>
+
+        <!-- אזור הבחירה -->
+        <div class="modal-selection-grid">
+            <!-- אפשרות כוכבים -->
+            <div class="price-card stars-card">
+                <div class="card-label purple-label">שילום בכוכבים</div>
+                <div class="card-main-content">
+                    <p class="upgrade-info">1GB</p>
+                    
+                    <!-- המחיר הגדול - משתמש באותם קלאסים של הכסף -->
+                    <div class="price-display">
+                        <span class="num">50</span>
+                        <span class="currency">
+                            <span class="star-icon-gold">★</span> כוכבים
+                        </span>
+                    </div>
+                    
+                    <!-- שורת תיאור קטנה - כדי שהכפתור יירד לאותו גובה כמו בשמאל -->
+                    <span class="one-time">מימוש מיידי</span>
+                </div>
+                <button class="modal-action-btn purple-stroke">שלם בכוכבים בלבד</button>
+            </div>
+            <div class="plus-divider">+</div>
+
+            <!-- אפשרות כסף -->
+            <div class="price-card cash-card">
+                <div class="card-label gold-label">שדרוג בכסף</div>
+                <div class="card-main-content">
+                    <p class="upgrade-info">הוסף עוד 1GB (סה"כ 2GB)</p>
+                    <div class="price-display">
+                        <span class="num">+10.00 ₪</span>
+                        <span class="currency"></span>
+                    </div>
+                    <span class="one-time">חיוב חד-פעמי</span>
+                </div>
+                <button class="modal-action-btn black-stroke">בחר ושדרג!</button>
+            </div>
+        </div>
+
+        <div class="modal-footer-balance">סה"כ כוכבים זמינים: 1000</div>
+    </div>
+</div>
    <script>
-    
+    // פונקציה לפתיחת הפופ-אפ של חבילת הגלישה
+    function openBrowsingPopup() {
+        const modal = document.getElementById('browsingPop');
+        modal.classList.remove('hidden');
+    }
+
+    // פונקציה לסגירת הפופ-אפ
+    function closeBrowsingPopup() {
+        const modal = document.getElementById('browsingPop');
+        modal.classList.add('hidden');
+    }
+
+    // סגירה של הפופ-אפ בלחיצה על הרקע הכהה (מחוץ לתיבה הלבנה)
+    window.addEventListener('click', function(event) {
+        const modal = document.getElementById('browsingPop');
+        // אם המשתמש לחץ על ה-Overlay עצמו ולא על התוכן שבתוכו
+        if (event.target === modal) {
+            closeBrowsingPopup();
+        }
+    });
     const popup = document.getElementById('welcomePop');
     const video = document.getElementById('characterVideo');
 
