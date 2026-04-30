@@ -310,7 +310,7 @@ body {
     font-weight: 900;
     background: linear-gradient(90deg, #fff 0%, #e0a0f0 25%, #c026d3 50%, #e0a0f0 75%, #fff 100%);
     -webkit-background-clip: text;
-    background-clip: text;  
+    background-clip: text; 
     -webkit-text-fill-color: transparent;
     background-size: 200%;
     animation: shimmer 4s linear infinite;
@@ -845,138 +845,10 @@ body {
         grid-template-columns: 1fr;
         width: 100%;
     }
-}
-
-@media (max-width: 768px) {
-
-    /* ── HEADER ── */
-    .top-bar {
-        padding: 0 16px;
-        font-size: 11px;
-    }
-
-    .main-header {
-        padding: 0 16px;
-        height: auto;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .right-section {
-        gap: 10px;
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .right-section img {
-        width: 80px;
-    }
-
-    .nav-menu {
-        display: none;
-    }
-
-    .left-section {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    /* ── BANNER ── */
-    .banner-container {
-        flex-direction: column-reverse;
-        padding: 20px 16px;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .star-image-area,
-    .star-click-wrapper {
-        width: 200px;
-    }
-
-    .text-content {
-        align-items: center;
-        margin-right: 0;
-        text-align: center;
-    }
-
-    .text-content h1 {
-        font-size: 26px;
-    }
-
-    .text-content p {
-        font-size: 16px;
-    }
-
-    .click-me-label {
-        font-size: 13px;
-        top: -14px;
-    }
-
-    .balance-pill {
-        padding: 10px 16px;
-        gap: 8px;
-    }
-
-    .balance-pill .balance-num {
-        font-size: 22px;
-    }
-
-    /* ── CATEGORIES ── */
-    .categories-nav {
-        gap: 20px;
-        overflow-x: auto;
-        justify-content: flex-start;
-        padding: 20px 16px;
-    }
-
-    .cat-item {
-        flex: 0 0 70px;
-    }
-
-    .cat-item img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .cat-item span {
-        font-size: 12px;
-    }
-
-    /* ── STORE ── */
-    .store-layout {
-        flex-direction: column;
-        padding: 16px 16px 60px;
-        gap: 20px;
-    }
-
-    .sidebar {
-        width: 100%;
-        padding: 16px;
-    }
-
-    .sidebar h2 {
-        font-size: 26px;
-    }
-
-    .benefits-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    /* ── FLOATING BUBBLE ── */
-    .floating-bubble {
-        width: 220px;
-        padding: 10px 70px 10px 12px;
-    }
-
-    .chat-title {
-        font-size: 14px;
-    }
-
-    .chat-message {
-        font-size: 12px;
+    #starfield {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
     }
 }
