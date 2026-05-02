@@ -421,7 +421,25 @@ body {
     text-align: center;
     width: 100%;
 }
+/* style.css */
+.change-filter-btn {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: transparent;
+    color: var(--purple-main); /* שימוש במשתנה הקיים שלך */
+    border: 1px solid var(--purple-main);
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: default; /* גורם לזה להיראות פחות "לחיץ" כרגע */
+    transition: all 0.3s ease;
+}
 
+.change-filter-btn:hover {
+    background-color: #f3e2f7; /* צבע רקע עדין במעבר עכבר */
+}
 /* HOVER */
 .cat-item:hover {
     transform: translateY(-6px);
@@ -862,6 +880,8 @@ body {
 
 .card-label { padding: 5px; font-size: 12px; font-weight: bold; color: white; }
 .purple-label { background: #a626bd; }
+.red-label { background: #be3c3c; }
+.blue-label { background: #1a1f5e; } /* כחול ספורטיבי התואם ל-bg-sports */
 .gold-label { background: #d4af37; }
 
 /* סידור התוכן בתוך הכרטיס - מרוכז וצפוף */
