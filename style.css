@@ -350,7 +350,7 @@ body {
     background: rgba(89, 2, 83, 0.127);
     border: 1px solid rgba(245,200,66,0.3);
     border-radius: 999px;
-    padding: 14px 24px;
+    padding: 10px 24px;
     margin-top: 12px;
 }
 
@@ -415,6 +415,11 @@ body {
     gap: 8px;
     margin-top: 14px;
     width: 100%;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(6px);
+    padding: 10px 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
 .level-info {
